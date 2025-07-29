@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/closeButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/homeSellerProfilePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/man"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeColor="@color/darkred"
+        app:strokeWidth="0.5dp" />
+
+    <ImageView
+        android:id="@+id/addProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintEnd_toEndOf="@+id/homeSellerProfilePicture"
+        app:srcCompat="@drawable/smalladd" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintStart_toStartOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/homeSellerProfilePicture" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editName"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
+        app:layout_constraintEnd_toEndOf="@+id/editName"
+        app:layout_constraintStart_toStartOf="@+id/editName" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPhone"
+        app:layout_constraintEnd_toEndOf="@+id/editPhone"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/editPhone" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bio"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editBio"
+        app:layout_constraintEnd_toEndOf="@+id/editBio"
+        app:layout_constraintStart_toStartOf="@+id/editBio" />
+
+    <EditText
+        android:id="@+id/editBio"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/editPhone"
+        app:layout_constraintStart_toStartOf="@+id/editPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+
+    <TextView
+        android:id="@+id/fullNameCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/20"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/editName"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <TextView
+        android:id="@+id/phoneNumberCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/10"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/editPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+
+    <TextView
+        android:id="@+id/bioCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/editBio"
+        app:layout_constraintTop_toBottomOf="@+id/editBio" />
+
+    <Button
+        android:id="@+id/updateProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Update Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBio" />
+
+    <TextView
+        android:id="@+id/phoneNumberError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="TextView"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/editPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

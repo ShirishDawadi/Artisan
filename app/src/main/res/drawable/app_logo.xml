@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="1500"
+    android:viewportHeight="1500">
+
+    <group>
+        <path
+            android:fillColor="@color/black"
+            android:pathData="M0,0h1500v1500h-1500z" />
+        <path
+            android:fillColor="@color/darkred"
+            android:pathData="M1247,750a497,497 0 1,1 -994,0a497,497 0 1,1 994,0" />
+        <path
+            android:strokeColor="@color/black"
+            android:strokeWidth="10"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M2556,2142a1346,1346 0 1,1 -2692,0a1346,1346 0 1,1 2692,0" />
+        <path
+            android:strokeColor="@color/black"
+            android:strokeWidth="10"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M627,563a1346,1346 0 1,1 -2692,0a1346,1346 0 1,1 2692,0" />
+        <path
+            android:strokeColor="@color/black"
+            android:strokeWidth="10"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M3029,-274a1346,1346 0 1,1 -2692,0a1346,1346 0 1,1 2692,0" />
+        <path
+            android:strokeColor="@color/black"
+            android:strokeWidth="10"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M2862,-245a1220,1220 0 1,1 -2440,0a1220,1220 0 1,1 2440,0" />
+        <path
+            android:fillColor="@color/black"
+            android:strokeColor="@color/black"
+            android:strokeWidth="1"
+            android:pathData="M628,560.5 L624,430.5 L650.5,467.5 L659,480.5 L670.5,494.5 L680,503.5
+                      C684.7,510 698.7,528.5 717.5,550.5
+                      C736.3,572.5 736,573 733.5,570.5
+                      L756.5,597.5 L778.5,617.5 L804.5,645 L822,657.5
+                      C829.2,664.3 846.8,680.9 860,692.5
+                      C873.2,704.1 895.8,721 905.5,728
+                      L940.5,753 L972.5,775.5 L1021.5,807.5
+                      L963,817 L914,829
+                      L905.8,824.7
+                      C904.4,823.7 901.3,821.4 895,817
+                      C881.4,807.4 866,795.3 860,790.5
+                      L834,767.5 L808.5,746.5 L787,728
+                      C781.3,723.3 767.3,711.5 756.5,701.5
+                      C745.7,691.5 741.3,686.7 740.5,685.5
+                      L721,666.5 L698.5,645 L670.5,614
+                      L650.5,590.5 L628,560.5 Z" />
+    </group>
+</vector>

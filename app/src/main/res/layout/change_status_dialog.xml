@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text='Are you sure you want to mark order as \n "Out for delivery"'
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/trackingImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkred"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_photos"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/addPhoto"
+            android:layout_width="match_parent"
+            android:paddingTop="120dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="Click to \n Add Photo"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Upload tracking info slip photo above"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:text="*Proof for delivery given by courier service"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/yes"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="@color/darkred"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </TableRow>
+</LinearLayout>

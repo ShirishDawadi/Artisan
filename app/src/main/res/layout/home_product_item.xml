@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/border_product"
+    android:paddingBottom="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/homeSellerProfilePicture"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/man"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeColor="@color/darkred"
+        app:strokeWidth="0.5dp" />
+
+    <TextView
+        android:id="@+id/homeSellerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="Seller name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintStart_toEndOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/homeSellerProfilePicture"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeSellerRating"
+        app:layout_constraintEnd_toStartOf="@+id/homeSellerRating"
+        app:layout_constraintTop_toTopOf="@+id/homeSellerRating"
+        app:srcCompat="@drawable/rate" />
+
+    <TextView
+        android:id="@+id/homeSellerRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="0.0"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeImageRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeSellerProfilePicture" />
+
+    <TextView
+        android:id="@+id/homeProductTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Product title"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeImageRecycler" />
+
+
+    <ImageView
+        android:id="@+id/homeLikeButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeProductTitle"
+        app:srcCompat="@drawable/like" />
+
+    <TextView
+        android:id="@+id/homeProductLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/homeLikeButton"
+        app:layout_constraintStart_toEndOf="@+id/homeLikeButton"
+        app:layout_constraintTop_toTopOf="@+id/homeLikeButton" />
+
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeProductLikes"
+        app:layout_constraintStart_toEndOf="@+id/homeProductLikes"
+        app:layout_constraintTop_toTopOf="@+id/homeProductLikes"
+        app:srcCompat="@drawable/comment" />
+
+    <TextView
+        android:id="@+id/homeProductComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintStart_toEndOf="@+id/imageView20"
+        app:layout_constraintTop_toTopOf="@+id/imageView20"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/homeProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="Rs.00000"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeProductTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

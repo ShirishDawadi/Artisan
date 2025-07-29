@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sellerProfilePicture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/man"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sellerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Seller's name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sellerProfilePicture"
+        app:layout_constraintStart_toEndOf="@+id/sellerProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/sellerProfilePicture" />
+
+    <TextView
+        android:id="@+id/likesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:hint="likes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:hint="rating"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/likesTextView"
+        app:layout_constraintEnd_toStartOf="@+id/ratingTextView"
+        app:layout_constraintTop_toTopOf="@+id/likesTextView"
+        app:srcCompat="@drawable/rate" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sellerNameTextView"
+        app:layout_constraintEnd_toStartOf="@+id/likesTextView"
+        app:layout_constraintTop_toTopOf="@+id/sellerNameTextView"
+        app:srcCompat="@drawable/like"
+        app:tint="@color/darkred" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sellerProfilePicture" />
+</androidx.constraintlayout.widget.ConstraintLayout>

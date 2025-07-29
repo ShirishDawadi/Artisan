@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:fontFamily="@font/gristela"
+            android:gravity="center|start"
+            android:paddingLeft="30dp"
+            android:text="Artisan"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toStartOf="@+id/threeLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/homeSellerProfilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/man"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:shapeAppearanceOverlay="@style/circular"
+            app:strokeColor="@color/darkred"
+            app:strokeWidth="0.5dp" />
+
+        <TextView
+            android:id="@+id/profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/homeSellerProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <ImageView
+            android:id="@+id/threeLine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/threeline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/homeSellerProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/profilename">
+
+            <Button
+                android:id="@+id/editProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/darkred"
+                android:text="Edit Profile"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/darkred"
+                android:text="Dashboard"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeSellerProfilePicture" />
+
+        <LinearLayout
+            android:id="@+id/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/homeSellerProfilePicture"
+            app:layout_constraintTop_toBottomOf="@+id/profilename">
+
+            <ImageView
+                android:id="@+id/rateIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/rate" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:gravity="bottom"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/likeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/like" />
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:gravity="bottom"
+                android:text="0"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/threeLine">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textAlignment="center"
+                android:textColor="@color/darkred"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/productCartNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomBottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:menu="@menu/profile_product_cart" />
+
+        <FrameLayout
+            android:id="@+id/cartFrameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productCartNavigation">
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

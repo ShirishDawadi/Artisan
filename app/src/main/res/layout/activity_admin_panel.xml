@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/threeline"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp" />
+
+        <FrameLayout
+            android:id="@+id/admin_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/black"
+            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/white"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/admin_drawer_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>

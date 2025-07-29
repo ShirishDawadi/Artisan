@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EditProduct">
+
+    <ImageView
+        android:id="@+id/closeAddProduct"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Edit Product"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/closeAddProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/productDetailsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <LinearLayout
+            android:id="@+id/productDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageRecyclerView" />
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/imageRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+
+                <RadioGroup
+                    android:id="@+id/aspectRatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                    <RadioButton
+                        android:id="@+id/square"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:checked="true"
+                        android:text="Square"
+                        android:textColor="@color/white"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:id="@+id/potrait"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Portrait"
+                        android:textColor="@color/white"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:id="@+id/landscape"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Landscape"
+                        android:textColor="@color/white"
+                        android:theme="@style/RadioButtonStyle" />
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:paddingStart="40dp"
+                    android:text="Title"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/productTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.65"
+                    android:background="@color/black"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:paddingStart="40dp"
+                    android:text="Price (Rs.)"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/productPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.65"
+                    android:background="@color/black"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:paddingStart="40dp"
+                    android:text="Description"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/productDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:background="@color/black"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+            <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:paddingStart="40dp"
+                    android:text="Tags/Keywords"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:orientation="vertical">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <EditText
+                        android:id="@+id/tagInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:padding="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Variation"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Stock"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/variationRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="200dp"
+                    />
+
+                <TextView
+                    android:id="@+id/addVariationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:text="+Add More Variation" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:backgroundTint="@color/darkred"
+                android:text="Edit Product" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

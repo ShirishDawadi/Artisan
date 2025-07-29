@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="26"
+    android:viewportHeight="26">
+
+    <!-- Outer circle with corner radius -->
+    <path
+        android:fillColor="#FEF9E1"
+        android:pathData="M13,0
+            a13,13 0 1,0 0,26
+            a13,13 0 1,0 0,-26Z" />
+
+    <!-- Complex icon paths -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M22.75,16.35
+            l-5.08,4.36
+            l-2.45,-2.11
+            l0.82,-0.7
+            l1.63,1.39
+            l4.26,-3.64
+            l0.82,0.7Z
+
+            M13.59,10
+            h-3.5v-1h3.5v1Z
+
+            M13.59,12
+            h-3.5v-1h3.5v1Z
+
+            M10.08,13
+            h3.5v1h-3.5v-1Z
+
+            M8.92,10
+            h-1.17v-1h1.17v1Z
+
+            M8.92,12
+            h-1.17v-1h1.17v1Z
+
+            M7.75,13
+            h1.17v1h-1.17v-1Z
+
+            M14.75,10v-4h-8.17v14h8.17v1h-9.33v-16h10.17
+            l5,4.29v5.71l-1.17,1v-6h-4.67Z
+
+            M15.92,9h2.67l-2.67,-2.29v2.29Z" />
+</vector>
