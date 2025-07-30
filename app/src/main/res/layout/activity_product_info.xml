@@ -426,12 +426,12 @@
         <Button
             android:id="@+id/addToCart"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/skin"
-            android:text="Add to Cart"
+            android:text="Add to\nWish List"
             android:textColor="@color/black"
             app:icon="@drawable/cart"
             app:iconPadding="0dp"
@@ -440,7 +440,7 @@
         <Button
             android:id="@+id/buyNow"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="30dp"
             android:layout_weight="1"

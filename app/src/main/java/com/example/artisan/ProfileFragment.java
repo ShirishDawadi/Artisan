@@ -70,7 +70,7 @@ public class ProfileFragment extends Fragment {
 
         Menu menu=productNavbar.getMenu();
         MenuItem productitem=menu.findItem(R.id.nav_product);
-        MenuItem cartItem= menu.findItem(R.id.nav_cart);
+        MenuItem cartItem= menu.findItem(R.id.nav_wish_list);
 
         MyApplication app = (MyApplication) requireActivity().getApplication();
         String userType=app.getUsertype();
@@ -81,7 +81,7 @@ public class ProfileFragment extends Fragment {
             loadChildFragment(new ProductFragment());
        }else{
             productitem.setVisible(false);
-            productNavbar.setSelectedItemId(R.id.nav_cart);
+            productNavbar.setSelectedItemId(R.id.nav_wish_list);
             loadChildFragment(new CartFragment());
         }
         productCartNavbar();
@@ -111,7 +111,7 @@ public class ProfileFragment extends Fragment {
     private void productCartNavbar() {
         productNavbar.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.nav_cart && item.isVisible()) {
+            if (itemId == R.id.nav_wish_list && item.isVisible()) {
                 loadChildFragment(new CartFragment());
                 return true;
             } else if (itemId == R.id.nav_order && item.isVisible()) {

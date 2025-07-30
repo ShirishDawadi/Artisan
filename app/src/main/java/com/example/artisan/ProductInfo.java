@@ -189,14 +189,14 @@ public class ProductInfo extends AppCompatActivity {
                     List<String> cart = (List<String>) documentSnapshot.get("cart");
                     if (cart != null && cart.contains(productId)) {
                         isInCart = true;
-                        addToCart.setText("Remove from Cart");
+                        addToCart.setText("Remove from\nWish List");
                     } else {
                         isInCart = false;
-                        addToCart.setText("Add to Cart");
+                        addToCart.setText("Add to\nWish List");
                     }
                 })
                 .addOnFailureListener(e -> {
-                    Log.e("Cart", "Failed to fetch cart", e);
+                    Log.e("Wish-List", "Failed to fetch cart", e);
                 });
     }
     private void addToCart() {
@@ -204,11 +204,11 @@ public class ProductInfo extends AppCompatActivity {
                 .update("cart", FieldValue.arrayUnion(productId))
                 .addOnSuccessListener(aVoid -> {
                     isInCart = true;
-                    addToCart.setText("Remove from Cart");
-                    Toast.makeText(this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                    addToCart.setText("Remove from\nWish List");
+                    Toast.makeText(this, "Added to Wish List", Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    Log.e("Cart", "Error adding to cart", e);
+                    Log.e("Wish-List", "Error adding to cart", e);
                 });
     }
     private void removeFromCart() {
@@ -216,8 +216,8 @@ public class ProductInfo extends AppCompatActivity {
                 .update("cart", FieldValue.arrayRemove(productId))
                 .addOnSuccessListener(aVoid -> {
                     isInCart = false;
-                    addToCart.setText("Add to Cart");
-                    Toast.makeText(this, "Removed from Cart", Toast.LENGTH_SHORT).show();
+                    addToCart.setText("Add to\nWish List");
+                    Toast.makeText(this, "Removed from Wish List", Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
                     Log.e("Cart", "Error removing from cart", e);
