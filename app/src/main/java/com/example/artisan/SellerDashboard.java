@@ -145,6 +145,7 @@ public class SellerDashboard extends AppCompatActivity {
                         ttlProductSold+=orderQuantity;
                     }
                     avgOrderValue=ttlRevenue/ttlOrder;
+                    avgOrderValue = Math.round(avgOrderValue * 100.0) / 100.0;
 
                     totalOrder.setText(String.valueOf(ttlOrder));
                     totalRevenue.setText("Rs."+ttlRevenue);
